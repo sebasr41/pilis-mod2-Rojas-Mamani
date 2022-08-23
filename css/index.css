@@ -15,7 +15,7 @@ body {
   margin-right: auto;
   margin-left: auto;
   font-family: "Poppins", sans-serif;
-  background-image: url("./../assets/blurry-gradient-haikei.svg");
+  background-color: var(--bg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -99,6 +99,26 @@ h1 {
   text-align: center;
 }
 
+.home::before,
+.home::after {
+  content: "";
+  background: url("./../assets/green-blur.svg");
+  position: absolute;
+  display: block;
+  inset: 0;
+  filter: blur(6rem);
+  width: 200px;
+  height: 200px;
+}
+.home::before {
+  top: 5rem;
+  left: 0;
+}
+.home::after {
+  top: 20rem;
+  left: 10rem;
+}
+
 @media screen and (min-width: 768px) {
   header .menu {
     display: none;
@@ -115,12 +135,8 @@ h1 {
     background-color: initial;
   }
 
-  header .navbar-menu a:hover {
-    border-bottom: 3px solid var(--green);
-  }
-
-  header .navbar-menu li:last-child a {
-    border-bottom: none;
+  header .navbar-menu li:last-child a::before {
+    display: initial;
   }
 
   header .navbar li:last-child,
@@ -136,6 +152,15 @@ h1 {
     margin-left: auto;
     margin-right: auto;
     display: block;
+  }
+
+  .home::before {
+    top: 5rem;
+    left: 5rem;
+  }
+  .home::after {
+    top: 20rem;
+    left: 25rem;
   }
 }
 
@@ -161,6 +186,17 @@ h1 {
 
   .home .btn-signup {
     margin-left: initial;
+  }
+
+  .home::before {
+    top: 5rem;
+    left: 0;
+    transform: translate(45vw);
+  }
+  .home::after {
+    top: 20rem;
+    left: 0;
+    transform: translate(80vw);
   }
 
   h1 {
