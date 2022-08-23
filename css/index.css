@@ -135,8 +135,36 @@ h1 {
     background-color: initial;
   }
 
+  header .navbar-menu a {
+    position: relative;
+  }
+
+  header .navbar-menu a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  header .navbar-menu a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  header .navbar-menu a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    border-bottom: 2px solid var(--green);
+    z-index: -1;
+    transition: transform 0.3s ease;
+  }
+
   header .navbar-menu li:last-child a::before {
-    display: initial;
+    display: none;
   }
 
   header .navbar li:last-child,
@@ -165,6 +193,15 @@ h1 {
 }
 
 @media screen and (min-width: 1024px) {
+  .btn-signup {
+    margin-left: initial;
+    transition: transform 0.2s;
+    will-change: transform;
+  }
+
+  .btn-signup:hover {
+    transform: scale(1.05);
+  }
   /* home */
 
   .home {
