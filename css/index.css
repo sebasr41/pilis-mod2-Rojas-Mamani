@@ -11,11 +11,13 @@
 
 body {
   margin: 0;
-  background-color: var(--bg);
   width: 90%;
   margin-right: auto;
   margin-left: auto;
   font-family: "Poppins", sans-serif;
+  background-image: url("./../assets/blurry-gradient-haikei.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ul {
@@ -26,6 +28,10 @@ ul {
 a {
   text-decoration: none;
   color: var(--black);
+}
+
+img {
+  width: 100%;
 }
 
 header .navbar .logo {
@@ -87,6 +93,12 @@ header .navbar li:last-child {
   margin-bottom: 1rem;
 }
 
+/* home */
+
+h1 {
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   header .menu {
     display: none;
@@ -100,6 +112,7 @@ header .navbar li:last-child {
     display: flex;
     align-items: center;
     gap: 1rem;
+    background-color: initial;
   }
 
   header .navbar-menu a:hover {
@@ -114,5 +127,44 @@ header .navbar li:last-child {
   header .navbar li:first-child {
     margin-top: initial;
     margin-bottom: initial;
+  }
+
+  /* home */
+
+  .hero-img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* home */
+
+  .home {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .home .hero-img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .home .home-content {
+    flex-basis: 70%;
+  }
+
+  .home .btn-signup {
+    margin-left: initial;
+  }
+
+  h1 {
+    text-align: initial;
+    font-size: 2rem;
   }
 }
