@@ -76,8 +76,43 @@ header .navbar li {
   margin-right: auto;
   width: fit-content;
   display: block;
+  font-weight: 700;
+}
+
+header .navbar li:first-child {
+  margin-top: 1rem;
 }
 
 header .navbar li:last-child {
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  header .menu {
+    display: none;
+  }
+
+  header .navbar-menu {
+    transform: translateX(0);
+    box-shadow: initial;
+    position: static;
+    width: initial;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header .navbar-menu a:hover {
+    border-bottom: 3px solid var(--green);
+  }
+
+  header .navbar-menu li:last-child a {
+    border-bottom: none;
+  }
+
+  header .navbar li:last-child,
+  header .navbar li:first-child {
+    margin-top: initial;
+    margin-bottom: initial;
+  }
 }
