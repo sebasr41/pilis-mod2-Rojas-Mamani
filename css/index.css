@@ -11,11 +11,13 @@
 
 body {
   margin: 0;
-  background-color: var(--bg);
   width: 90%;
   margin-right: auto;
   margin-left: auto;
   font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 ul {
@@ -26,6 +28,10 @@ ul {
 a {
   text-decoration: none;
   color: var(--black);
+}
+
+img {
+  width: 100%;
 }
 
 header .navbar .logo {
@@ -87,6 +93,32 @@ header .navbar li:last-child {
   margin-bottom: 1rem;
 }
 
+/* home */
+
+h1 {
+  text-align: center;
+}
+
+.home::before,
+.home::after {
+  content: "";
+  background: url("./../assets/green-blur.svg");
+  position: absolute;
+  display: block;
+  inset: 0;
+  filter: blur(6rem);
+  width: 200px;
+  height: 200px;
+}
+.home::before {
+  top: 5rem;
+  left: 0;
+}
+.home::after {
+  top: 20rem;
+  left: 10rem;
+}
+
 @media screen and (min-width: 768px) {
   header .menu {
     display: none;
@@ -100,19 +132,75 @@ header .navbar li:last-child {
     display: flex;
     align-items: center;
     gap: 1rem;
+    background-color: initial;
   }
 
-  header .navbar-menu a:hover {
-    border-bottom: 3px solid var(--green);
-  }
-
-  header .navbar-menu li:last-child a {
-    border-bottom: none;
+  header .navbar-menu li:last-child a::before {
+    display: initial;
   }
 
   header .navbar li:last-child,
   header .navbar li:first-child {
     margin-top: initial;
     margin-bottom: initial;
+  }
+
+  /* home */
+
+  .hero-img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .home::before {
+    top: 5rem;
+    left: 5rem;
+  }
+  .home::after {
+    top: 20rem;
+    left: 25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /* home */
+
+  .home {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .home .hero-img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .home .home-content {
+    flex-basis: 70%;
+  }
+
+  .home .btn-signup {
+    margin-left: initial;
+  }
+
+  .home::before {
+    top: 5rem;
+    left: 0;
+    transform: translate(45vw);
+  }
+  .home::after {
+    top: 20rem;
+    left: 0;
+    transform: translate(80vw);
+  }
+
+  h1 {
+    text-align: initial;
+    font-size: 2rem;
   }
 }
