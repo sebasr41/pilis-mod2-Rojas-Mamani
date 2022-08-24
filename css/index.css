@@ -119,6 +119,63 @@ h1 {
   left: 10rem;
 }
 
+/* register */
+
+.register .register-content {
+  position: relative;
+}
+
+.register .register-content::before {
+  content: "";
+  background: url("./../assets/green-blur.svg");
+  position: absolute;
+  display: block;
+  inset: 0;
+  filter: blur(5rem);
+  width: 150px;
+  height: 150px;
+}
+
+.register .register-content::before {
+  top: 0;
+  left: 0;
+}
+
+.register .register-title {
+  text-align: center;
+}
+
+.register form {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--very-light-green);
+}
+
+.register label,
+.register input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.7rem;
+}
+
+.register form .form-group:nth-child(2) {
+  margin-bottom: 1.5rem;
+}
+
+.register input {
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 1rem;
+}
+
+.register input[type="submit"] {
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
   header .menu {
     display: none;
@@ -190,6 +247,13 @@ h1 {
     top: 20rem;
     left: 25rem;
   }
+  /* register */
+
+  .register form {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -239,5 +303,23 @@ h1 {
   h1 {
     text-align: initial;
     font-size: 2rem;
+  }
+
+  /* register */
+
+  .register {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .register .register-title {
+    text-align: initial;
+  }
+
+  .register form {
+    width: 35%;
+    margin-right: 0;
   }
 }
