@@ -37,20 +37,72 @@
         </ul>
       </nav>
     </header>
-    <section class="about-me">
-      <h1>Quienes somos</h1>
-      <article class="text-about">
-        <p>
-          El ministerio de desarrollo y produccion de jujuy tiene como objetivo otorgar distintos servicios a la comunidad como consultorio de pymes, registro de servicios profesionales..
-        </p>
-        <ul>
-          <li>
-            <a class="btn btn-more-info" href="#">saber mas?</a>
-          </li>
-        </ul>
-      </article>
-    </section>
-
+    
+    <main>
+      <section id="home" class="home">
+        <img
+        class="hero-img"
+        src="./assets/hero-img.png"
+        alt="cactus en una maceta"
+        />
+        <div class="home-content">
+          <h1>Nos encanta ayudarte a proteger la tierra 🌵</h1>
+          <p>
+            Te ayudamos a realizar tus sueños al hacer un jardín, comencemos con
+            cosas pequeñas que pueden cambiar el mundo, para que pueda disfrutar
+            del aire fresco para siempre
+          </p>
+          <a class="btn btn-signup" href="#">Registrarse</a>
+        </div>
+      </section>
+      <section class="about-me">
+        <h1>Quienes somos</h1>
+        <article class="text-about">
+          <p>
+            El ministerio de desarrollo y produccion de jujuy tiene como objetivo otorgar distintos servicios a la comunidad como consultorio de pymes, registro de servicios profesionales..
+          </p>
+          <ul>
+            <li>
+              <a class="btn btn-more-info" href="#">saber mas?</a>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="register" class="register">
+        <div class="register-content">
+          <h2 class="register-title">Registrate 🌱</h2>
+          <p>Sumáte al evento para potenciar el comercio local.</p>
+          <p>Luego te contactaremos.</p>
+        </div>
+        <form>
+          <div class="form-group">
+            <label for="email">Correo electrónico: </label>
+            <input
+              type="email"
+              placeholder="Ingrese su correo"
+              id="email"
+              title="Email incorrecto"
+              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="comercio">Comercio: </label>
+            <input
+              type="text"
+              placeholder="Ingrese su comercio"
+              id="comercio"
+              title="El nombre del comercio es requerido"
+              required
+            />
+          </div>
+          <input type="submit" class="btn" value="Enviar" />
+        </form>
+      </section>
+    </main>
+    <button class="dark-theme-btn" id="icon-theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
     <script src="./js/index.js"></script>
   </body>
 </html>
