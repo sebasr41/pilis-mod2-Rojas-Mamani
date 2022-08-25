@@ -320,6 +320,12 @@ h1 {
     top: 20rem;
     left: 25rem;
   }
+/* about event */
+
+.about-event iframe {
+  display: block;
+  width: 100%;
+}
 
   /* about us */
 
@@ -389,6 +395,32 @@ h1 {
     text-align: initial;
     font-size: 2rem;
   }
+ /* about event */
+
+ .about-event h2 {
+  text-align: center;
+}
+
+.about-event .about-event-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 1px solid red; */
+  /* display: flex;
+  gap: 3rem; */
+}
+
+/* .about-event .text-about,
+.about-event iframe {
+  flex-basis: 50%;
+} */
+
+.about-event iframe {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
   /* about us */
 
