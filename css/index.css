@@ -94,6 +94,18 @@ header .navbar li:first-child {
 header .navbar li:last-child {
   margin-bottom: 1rem;
 }
+.about-me h1 {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 0.5em;
+  color:  #335022;
+}
+.text-about p {
+  text-align: center;
+  margin: 0;
+  
+  
+}
 
 /* home */
 
@@ -357,4 +369,7 @@ h1 {
   --bg: #f4f7f7;
   --text: #0c140c;
   --shadow: rgba(0, 0, 0, 0.1);
+
 }
+
+
