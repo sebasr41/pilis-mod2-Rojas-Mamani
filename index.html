@@ -133,7 +133,7 @@
           <p>Sumáte al evento para potenciar el comercio local.</p>
           <p>Luego te contactaremos.</p>
         </div>
-        <form>
+        <form id="formulario">
           <div class="form-group">
             <label for="email">Correo electrónico: </label>
             <input
@@ -155,13 +155,15 @@
               required
             />
           </div>
-          <input type="submit" class="btn" value="Enviar" />
+          <input id="enviar" type="submit" class="btn" value="Enviar" />
         </form>
       </section>
     </main>
-    <button class="dark-theme-btn" id="icon-theme">
+    <button  class="dark-theme-btn" id="icon-theme">
       <i class="fa-solid fa-moon"></i>
     </button>
     <script src="./js/index.js"></script>
+    <script src="./js/form.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
