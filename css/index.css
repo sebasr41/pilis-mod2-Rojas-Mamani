@@ -1,7 +1,9 @@
 :root {
   /* Light theme */
-  --bg: #f4f7f7;
+  /* --bg: #f4f7f7; */
+  --bg: #fff;
   --text: #0c140c;
+  --bg-card: #e4e6f1;
   --shadow: rgba(100, 100, 100, 0.1);
   --light-gray: #aeb0a6;
   --dark-gray: #7c8179;
@@ -94,18 +96,6 @@ header .navbar li:first-child {
 header .navbar li:last-child {
   margin-bottom: 1rem;
 }
-.about-me h1 {
-  margin: 0;
-  text-align: center;
-  padding-bottom: 0.5em;
-  color:  #335022;
-}
-.text-about p {
-  text-align: center;
-  margin: 0;
-  
-  
-}
 
 /* home */
 
@@ -131,6 +121,57 @@ h1 {
 .home::after {
   top: 20rem;
   left: 10rem;
+}
+
+/* about us */
+
+.text-about {
+  margin-bottom: 1.5rem;
+}
+
+.about-us h2 {
+  text-align: center;
+}
+
+.about-us .link-more-info {
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  position: relative;
+}
+
+.about-us .link-more-info::after {
+  content: "";
+  width: 100%;
+  height: 0.65rem;
+  display: block;
+  background-color: var(--green);
+  position: absolute;
+  bottom: 0.1rem;
+  z-index: -1;
+  border-radius: 0.3rem;
+}
+
+.about-us .card {
+  text-align: center;
+  border-radius: 0.5rem;
+  background-color: var(--bg-card);
+  /* border: 1px solid red; */
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about-us .card img {
+  width: 40%;
+  border-radius: 50%;
+  margin-left: auto;
+  border: 4px solid var(--green);
+  margin-right: auto;
+  display: block;
 }
 
 /* register */
@@ -203,6 +244,7 @@ h1 {
   color: var(--text);
   box-shadow: 10px 10px 10px var(--shadow), -10px -1px 10px var(--shadow);
 }
+
 .dark-theme-btn i {
   font-size: 1.2rem;
 }
@@ -278,6 +320,18 @@ h1 {
     top: 20rem;
     left: 25rem;
   }
+
+  /* about us */
+
+  .about-us .cards {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .about-us .card {
+    flex-basis: 30%;
+  }
+
   /* register */
 
   .register form {
@@ -336,6 +390,22 @@ h1 {
     font-size: 2rem;
   }
 
+  /* about us */
+
+  .about-us .text-about {
+    text-align: center;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .about-us .cards {
+    justify-content: center;
+  }
+
+  .about-us .card {
+    flex-basis: 20%;
+  }
   /* register */
 
   .register {
@@ -369,7 +439,4 @@ h1 {
   --bg: #f4f7f7;
   --text: #0c140c;
   --shadow: rgba(0, 0, 0, 0.1);
-
 }
-
-
