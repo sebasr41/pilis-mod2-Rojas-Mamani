@@ -39,6 +39,10 @@ img {
   width: 100%;
 }
 
+section {
+  margin-bottom: 5rem;
+}
+
 header .navbar .logo {
   width: 80px;
 }
@@ -123,6 +127,13 @@ h1 {
   left: 10rem;
 }
 
+/* about event */
+
+.about-event iframe {
+  display: block;
+  width: 100%;
+}
+
 /* about us */
 
 .text-about {
@@ -160,7 +171,6 @@ h1 {
   text-align: center;
   border-radius: 0.5rem;
   background-color: var(--bg-card);
-  /* border: 1px solid red; */
   padding: 1rem;
   margin-bottom: 1rem;
 }
@@ -250,6 +260,10 @@ h1 {
 }
 
 @media screen and (min-width: 768px) {
+  section {
+    margin-bottom: 8rem;
+  }
+
   header .menu {
     display: none;
   }
@@ -320,12 +334,6 @@ h1 {
     top: 20rem;
     left: 25rem;
   }
-/* about event */
-
-.about-event iframe {
-  display: block;
-  width: 100%;
-}
 
   /* about us */
 
@@ -395,32 +403,32 @@ h1 {
     text-align: initial;
     font-size: 2rem;
   }
- /* about event */
 
- .about-event h2 {
-  text-align: center;
-}
+  /* about event */
 
-.about-event .about-event-container {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  /* border: 1px solid red; */
-  /* display: flex;
-  gap: 3rem; */
-}
+  .about-event h2 {
+    text-align: center;
+  }
 
-/* .about-event .text-about,
-.about-event iframe {
-  flex-basis: 50%;
-} */
+  .about-event .about-event-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* border: 1px solid red; */
+    /* display: flex;
+    gap: 3rem; */
+  }
 
-.about-event iframe {
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-}
+  /* .about-event .text-about,
+  .about-event iframe {
+    flex-basis: 50%;
+  } */
 
+  .about-event iframe {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   /* about us */
 
