@@ -5,6 +5,7 @@
   --text: #0c140c;
   --bg-card: #e4e6f1;
   --shadow: rgba(100, 100, 100, 0.1);
+  --red: #fc0000;
   --light-gray: #aeb0a6;
   --dark-gray: #7c8179;
   --very-dark-gray: #5d6464;
@@ -15,9 +16,7 @@
 
 body {
   margin: 0;
-  width: 90%;
-  margin-right: auto;
-  margin-left: auto;
+
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   background-repeat: no-repeat;
@@ -41,6 +40,12 @@ img {
 
 section {
   margin-bottom: 5rem;
+}
+
+.wrapper {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 header .navbar .logo {
@@ -240,6 +245,7 @@ h1 {
   color: white;
   cursor: pointer;
 }
+
 /* weather */
 
 .weather .weather-card {
@@ -308,12 +314,55 @@ h1 {
   font-size: 0.7rem;
 }
 
+/* footer */
+
+footer {
+  background-color: var(--dark-green);
+  padding: 1rem;
+  margin: 0;
+}
+
+footer .logo {
+  width: 100px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.footer-menu a {
+  color: white;
+}
+
+.footer-social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.footer-social-media li a {
+  color: white;
+}
+
+.footer-social-media li a i {
+  font-size: 1.5rem;
+}
 /* btn light/dark-theme */
 
 .dark-theme-btn {
   border: none;
   position: fixed;
   bottom: 1rem;
+  left: 1rem;
   cursor: pointer;
   padding: 0.8rem;
   border-radius: 0.5rem;
@@ -536,6 +585,7 @@ h1 {
     width: 35%;
     margin-right: 0;
   }
+
   /* weather */
 
   .weather {
@@ -573,6 +623,24 @@ h1 {
     width: 60%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* footer */
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;
+  }
+
+  footer .logo {
+    margin-left: initial;
+    margin-right: initial;
+  }
+
+  .footer-menu {
+    margin-bottom: 1rem;
   }
 }
 
