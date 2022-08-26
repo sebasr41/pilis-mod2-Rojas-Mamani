@@ -1,22 +1,33 @@
 :root {
   /* Light theme */
-  /* --bg: #f4f7f7; */
-  --bg: #fff;
+  --bg: #f4f7f7;
   --text: #0c140c;
-  --bg-card: #e4e6f1;
+  /* --bg-card: #e4e6f1; */
+  --bg-card: #f0f2fa;
   --shadow: rgba(100, 100, 100, 0.1);
   --red: #fc0000;
+  --btn-text: #fff;
+  --bg-footer: #335022;
   --light-gray: #aeb0a6;
   --dark-gray: #7c8179;
   --very-dark-gray: #5d6464;
   --very-light-green: #b3cabb;
   --green: #3d9830;
-  --dark-green: #335022;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 4rem;
+  margin-top: -3rem;
 }
 
 body {
   margin: 0;
-
   font-family: "Poppins", sans-serif;
   background-color: var(--bg);
   background-repeat: no-repeat;
@@ -90,7 +101,7 @@ header .navbar li {
   background-color: var(--green);
   padding: 0.7rem 1.5rem;
   border-radius: 0.5rem;
-  color: white;
+  color: var(--btn-text);
   margin-left: auto;
   margin-right: auto;
   width: fit-content;
@@ -123,16 +134,45 @@ h1 {
   width: 200px;
   height: 200px;
 }
+
 .home::before {
   top: 5rem;
   left: 0;
 }
+
 .home::after {
   top: 20rem;
   left: 10rem;
 }
 
 /* about event */
+
+.about-event {
+  position: relative;
+}
+
+.about-event::before,
+.about-event::after {
+  content: "";
+  background: url("./../assets/green-blur.svg");
+  position: absolute;
+  display: block;
+  inset: 0;
+  filter: blur(6rem);
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+}
+
+.about-event::before {
+  top: 2rem;
+  left: 0;
+}
+
+.about-event::after {
+  top: 45rem;
+  left: 10rem;
+}
 
 .about-event iframe {
   display: block;
@@ -204,6 +244,7 @@ h1 {
   filter: blur(5rem);
   width: 150px;
   height: 150px;
+  z-index: -1;
 }
 
 .register .register-content::before {
@@ -218,7 +259,7 @@ h1 {
 .register form {
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: var(--very-light-green);
+  background-color: var(--bg-card);
 }
 
 .register label,
@@ -242,14 +283,17 @@ h1 {
 
 .register input[type="submit"] {
   font-weight: 700;
-  color: white;
   cursor: pointer;
 }
 
 /* weather */
 
+.weather h2 {
+  text-align: center;
+}
+
 .weather .weather-card {
-  border: 1px solid red;
+  background-color: var(--bg-card);
   border-radius: 0.5rem;
   padding: 1rem;
   margin-bottom: 0.5rem;
@@ -273,7 +317,7 @@ h1 {
 .weather .weather-temperature {
   font-size: 3rem;
   padding-right: 1rem;
-  border-right: 1px solid red;
+  border-right: 1px solid var(--text);
 }
 
 .weather .weather-day,
@@ -293,7 +337,7 @@ h1 {
 }
 
 .weather .weather-schedule {
-  border: 1px solid red;
+  background-color: var(--bg-card);
   border-radius: 0.5rem;
   display: flex;
   justify-content: center;
@@ -317,7 +361,7 @@ h1 {
 /* footer */
 
 footer {
-  background-color: var(--dark-green);
+  background-color: var(--bg-footer);
   padding: 1rem;
   margin: 0;
 }
@@ -446,6 +490,7 @@ footer .logo {
     top: 5rem;
     left: 5rem;
   }
+
   .home::after {
     top: 20rem;
     left: 25rem;
@@ -469,6 +514,11 @@ footer .logo {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .register-text {
+    text-align: center;
+  }
+
   /* weather */
   .weather {
     width: 60%;
@@ -533,23 +583,24 @@ footer .logo {
   }
 
   .about-event .about-event-container {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    /* border: 1px solid red; */
-    /* display: flex;
-    gap: 3rem; */
-  }
-
-  /* .about-event .text-about,
-  .about-event iframe {
-    flex-basis: 50%;
-  } */
-
-  .about-event iframe {
     width: 75%;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .about-event .text-about {
+    margin-bottom: 3rem;
+  }
+
+  .about-event::before {
+    top: 10rem;
+    left: 8rem;
+  }
+
+  .about-event::after {
+    top: 25rem;
+    left: 65vw;
+    right: 0;
   }
 
   /* about us */
@@ -563,22 +614,52 @@ footer .logo {
 
   .about-us .cards {
     justify-content: center;
+    position: relative;
   }
 
   .about-us .card {
     flex-basis: 20%;
   }
+
+  .about-us .cards::before,
+  .about-us .cards::after {
+    content: "";
+    background: url("./../assets/green-blur.svg");
+    position: absolute;
+    display: block;
+    inset: 0;
+    filter: blur(6rem);
+    width: 130px;
+    height: 130px;
+    z-index: -1;
+  }
+
+  .about-us .cards::before {
+    top: -5rem;
+    left: 6rem;
+  }
+
+  .about-us .cards::after {
+    top: 3rem;
+    left: 60rem;
+  }
+
   /* register */
 
-  .register {
+  .register .register-content {
     display: flex;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .register .register-title {
+  .register .register-text {
     text-align: initial;
+  }
+
+  .register .register-title {
+    text-align: center;
+    margin-bottom: 3rem;
   }
 
   .register form {
@@ -601,7 +682,6 @@ footer .logo {
 
   .weather .weather-card {
     display: flex;
-    border: 1px solid red;
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
@@ -642,6 +722,37 @@ footer .logo {
   .footer-menu {
     margin-bottom: 1rem;
   }
+
+  .footer-menu a,
+  .footer-social-media a {
+    position: relative;
+  }
+
+  .footer-menu a::before,
+  .footer-social-media a::before {
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+  .footer-menu a:hover::before,
+  .footer-social-media a:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+
+  .footer-menu a::before,
+  .footer-social-media a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    inset: 0 0 0 0;
+    border-bottom: 2px solid var(--green);
+    transition: transform 0.3s ease;
+  }
 }
 
 /* Light/Dark theme mode */
@@ -651,6 +762,8 @@ footer .logo {
   --bg: #16161e;
   --text: #f4f7f7;
   --shadow: rgba(100, 100, 100, 0.1);
+  --bg-card: #252a41;
+  --bg-footer: #252a41;
 }
 
 .is-light-mode {
@@ -658,4 +771,6 @@ footer .logo {
   --bg: #f4f7f7;
   --text: #0c140c;
   --shadow: rgba(0, 0, 0, 0.1);
+  --bg-card: #f0f2fa;
+  --bg-footer: #335022;
 }
