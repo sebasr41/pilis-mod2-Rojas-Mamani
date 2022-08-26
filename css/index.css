@@ -240,6 +240,73 @@ h1 {
   color: white;
   cursor: pointer;
 }
+/* weather */
+
+.weather .weather-card {
+  border: 1px solid red;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.weather-info {
+  margin-bottom: 1rem;
+}
+
+.weather .weather-mode {
+  text-align: center;
+}
+
+.weather .weather-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.weather .weather-temperature {
+  font-size: 3rem;
+  padding-right: 1rem;
+  border-right: 1px solid red;
+}
+
+.weather .weather-day,
+.weather .weather-city {
+  margin: 0;
+}
+
+.weather .weather-city i {
+  color: var(--red);
+}
+
+.weather .weather-img {
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weather .weather-schedule {
+  border: 1px solid red;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.weather .weather-schedule .weather-gap {
+  padding: 1rem;
+}
+
+.weather .weather-gap > span {
+  display: block;
+  text-align: center;
+}
+
+.weather .weather-gap .gap-temperature,
+.weather .weather-gap .gap-meridiem {
+  font-size: 0.7rem;
+}
 
 /* btn light/dark-theme */
 
@@ -353,6 +420,12 @@ h1 {
     margin-left: auto;
     margin-right: auto;
   }
+  /* weather */
+  .weather {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -462,6 +535,44 @@ h1 {
   .register form {
     width: 35%;
     margin-right: 0;
+  }
+  /* weather */
+
+  .weather {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .weather .weather-mode {
+    text-align: initial;
+    font-weight: 500;
+  }
+
+  .weather .weather-card {
+    display: flex;
+    border: 1px solid red;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .weather .weather-temperature {
+    font-size: 4rem;
+    font-weight: 600;
+  }
+
+  .weather .weather-img {
+    margin-right: initial;
+    margin-left: initial;
+    width: 25%;
+  }
+
+  .weather-schedule {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
