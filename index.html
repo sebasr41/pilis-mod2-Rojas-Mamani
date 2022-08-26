@@ -190,14 +190,17 @@
         <h2>Así está el clima en el lugar del evento 🛰️</h2>
         <div class="weather-card">
           <div class="weather-info">
-            <h3 class="weather-mode">Sunny</h3>
+            <h3 class="weather-mode" id="weather-mode">⏳</h3>
             <div class="weather-content">
-              <span class="weather-temperature">25°</span>
+              <span class="weather-temperature" id="weather-temperature"
+                >⏳</span
+              >
               <div class="weather-details">
-                <p class="weather-day">Monday, 21 september</p>
+                <p class="weather-day"></p>
                 <p class="weather-city">
-                  <i class="fa-solid fa-location-dot"></i> San Francisco
+                  <i class="fa-solid fa-location-dot"></i> San Salvador de Jujuy
                 </p>
+                <p class="weather-city">🏢 Ciudad cultural</p>
               </div>
             </div>
           </div>
@@ -207,34 +210,18 @@
             alt=""
           />
         </div>
-        <div class="weather-schedule">
-          <div class="weather-gap">
-            <span class="gap-temperature"> 21° </span>
-            <span class="gap-icon"> ☀️ </span>
-            <span class="gap-time"> 12:00 </span>
-            <span class="gap-meridiem"> PM </span>
-          </div>
-          <div class="weather-gap">
-            <span class="gap-temperature"> 21° </span>
-            <span class="gap-icon"> ☀️ </span>
-            <span class="gap-time"> 12:00 </span>
-            <span class="gap-meridiem"> PM </span>
-          </div>
-          <div class="weather-gap">
-            <span class="gap-temperature"> 21° </span>
-            <span class="gap-icon"> ☀️ </span>
-            <span class="gap-time"> 12:00 </span>
-            <span class="gap-meridiem"> PM </span>
-          </div>
-          <div class="weather-gap">
-            <span class="gap-temperature"> 21° </span>
-            <span class="gap-icon"> ☀️ </span>
-            <span class="gap-time"> 12:00 </span>
-            <span class="gap-meridiem"> PM </span>
-          </div>
-        </div>
+        <div class="weather-schedule"></div>
       </section>
     </main>
+
+    <template id="template-weather">
+      <div class="weather-gap">
+        <span class="gap-temperature">⏳</span>
+        <span class="gap-icon">⏳</span>
+        <span class="gap-time">⏳</span>
+        <span class="gap-meridiem">⏳</span>
+      </div>
+    </template>
 
     <footer>
       <a href="#home">
