@@ -15,24 +15,28 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/index.css" />
-    <title>Document</title>
+    <title>Pilis - FSWD</title>
   </head>
   <body>
     <header class="wrapper">
       <nav class="navbar">
-        <img src="./assets/logo.png" alt="logo" class="logo" />
+        <a href="#home">
+          <img src="./assets/logo.png" alt="logo" class="logo" />
+        </a>
 
         <i class="fa-solid fa-bars menu" id="menu"></i>
 
         <ul class="navbar-menu">
           <li>
-            <a href="#">Quienes somos</a>
+            <a href="#about-event">Sobre el evento</a>
           </li>
+
           <li>
-            <a href="#">Sobre el evento</a>
+            <a href="#about-us">Quienes somos</a>
           </li>
+
           <li>
-            <a class="btn btn-signup" href="#">Registrarse</a>
+            <a class="btn btn-signup" href="#register">Registrarse</a>
           </li>
         </ul>
       </nav>
@@ -50,12 +54,13 @@
           <p>
             Te ayudamos a realizar tus sueños al hacer un jardín, comencemos con
             cosas pequeñas que pueden cambiar el mundo, para que pueda disfrutar
-            del aire fresco para siempre
+            del aire fresco para siempre.
           </p>
-          <a class="btn btn-signup" href="#">Registrarse</a>
+          <a class="btn btn-signup" href="#register">Registrarse</a>
         </div>
       </section>
-      <section class="about-event">
+
+      <section id="about-event" class="about-event">
         <h2>La Feria de Plantas recibe este sábado a la primavera 🪴</h2>
         <div class="about-event-container">
           <div class="text-about">
@@ -89,7 +94,41 @@
         </div>
       </section>
 
-      <section class="about-us">
+      <section id="register" class="register">
+        <h2 class="register-title">Registrate 🌱</h2>
+        <div class="register-content">
+          <div class="register-text">
+            <p>Sumáte al evento para potenciar el comercio local.</p>
+            <p>Luego te contactaremos.</p>
+          </div>
+          <form id="formulario">
+            <div class="form-group">
+              <label for="email">Correo electrónico: </label>
+              <input
+                type="email"
+                placeholder="Ingrese su correo"
+                id="email"
+                title="Email incorrecto"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="comercio">Comercio: </label>
+              <input
+                type="text"
+                placeholder="Ingrese su comercio"
+                id="comercio"
+                title="El nombre del comercio es requerido"
+                required
+              />
+            </div>
+            <input id="enviar" type="submit" class="btn" value="Enviar" />
+          </form>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-us">
         <div class="text-about">
           <h2>Quienes somos 👋</h2>
           <p>
@@ -97,7 +136,12 @@
             objetivo otorgar distintos servicios a la comunidad como consultorio
             de pymes, registro de servicios profesionales.
           </p>
-          <a class="link-more-info" target="_blank" href="#">Saber mas</a>
+          <a
+            class="link-more-info"
+            target="_blank"
+            href="http://www.produccion.jujuy.gob.ar/"
+            >Saber mas</a
+          >
         </div>
         <div class="cards">
           <div class="card">
@@ -127,37 +171,6 @@
         </div>
       </section>
 
-      <section id="register" class="register">
-        <div class="register-content">
-          <h2 class="register-title">Registrate 🌱</h2>
-          <p>Sumáte al evento para potenciar el comercio local.</p>
-          <p>Luego te contactaremos.</p>
-        </div>
-        <form id="formulario">
-          <div class="form-group">
-            <label for="email">Correo electrónico: </label>
-            <input
-              type="email"
-              placeholder="Ingrese su correo"
-              id="email"
-              title="Email incorrecto"
-              pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="comercio">Comercio: </label>
-            <input
-              type="text"
-              placeholder="Ingrese su comercio"
-              id="comercio"
-              title="El nombre del comercio es requerido"
-              required
-            />
-          </div>
-          <input id="enviar" type="submit" class="btn" value="Enviar" />
-        </form>
-      </section>
       <section class="weather">
         <h2>Así está el clima en el lugar del evento 🛰️</h2>
         <div class="weather-card">
@@ -209,16 +222,18 @@
     </main>
 
     <footer>
-      <img src="./assets/logo.png" alt="logo" class="logo" />
+      <a href="#home">
+        <img src="./assets/logo.png" alt="logo" class="logo" />
+      </a>
       <ul class="footer-menu">
         <li>
-          <a href="#">Quienes somos</a>
+          <a href="#about-us">Quienes somos</a>
         </li>
         <li>
-          <a href="#">Sobre el evento</a>
+          <a href="#about-event">Sobre el evento</a>
         </li>
         <li>
-          <a href="#">Registrarse</a>
+          <a href="#register">Registrarse</a>
         </li>
       </ul>
       <ul class="footer-social-media">
