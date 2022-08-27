@@ -1,11 +1,273 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-</body>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7ad611c8d8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
+    <title>Pilis - FSWD</title>
+  </head>
+  <body>
+    <header class="wrapper">
+      <nav class="navbar">
+        <a href="#home">
+          <img src="./assets/logo.png" alt="logo" class="logo" />
+        </a>
+
+        <i class="fa-solid fa-bars menu" id="menu"></i>
+
+        <ul class="navbar-menu">
+          <li>
+            <a href="#about-event">Sobre el evento</a>
+          </li>
+
+          <li>
+            <a href="#about-us">Quienes somos</a>
+          </li>
+
+          <li>
+            <a class="btn btn-signup" href="#register">Registrarse</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="wrapper">
+      <section id="home" class="home">
+        <img
+          class="hero-img"
+          src="./assets/hero-img.png"
+          alt="cactus en una maceta"
+        />
+        <div class="home-content">
+          <h1>Nos encanta ayudarte a proteger la tierra 🌵</h1>
+          <p>
+            Te ayudamos a realizar tus sueños al hacer un jardín, comencemos con
+            cosas pequeñas que pueden cambiar el mundo, para que pueda disfrutar
+            del aire fresco para siempre.
+          </p>
+          <a class="btn btn-signup" href="#register">Registrarse</a>
+        </div>
+      </section>
+
+      <section id="about-event" class="about-event">
+        <h2>La Feria de Plantas recibe este sábado a la primavera 🪴</h2>
+        <div class="about-event-container">
+          <div class="text-about">
+            <p>
+              Preparando la bienvenida a la primavera, hoy la Feria de Plantas
+              tendrá distintas actividades.
+            </p>
+            <p>
+              La Municipalidad de San Salvador de Jujuy junto a Appojuy
+              (Asociación de Productores de Plantas Ornamentales de Jujuy)
+              invitan a participar en la playa de estacionamiento de avenida 19
+              de Abril.
+            </p>
+            <p>
+              De 9 a 10 se dictará una charla gratuita sobre la temática
+              "Plantas de interior. El ABC de las plantas de interior". La
+              disertación estará a cargo de Jorgelina Gutiérrez y Nancy Jara,
+              quienes brindarán los tips básicos y necesarios para poder
+              mantener las plantas de interior en perfectas condiciones.
+            </p>
+          </div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/fLh5HWb25LI"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </section>
+
+      <section id="register" class="register">
+        <h2 class="register-title">Registrate 🌱</h2>
+        <div class="register-content">
+          <div class="register-text">
+            <p>Sumáte al evento para potenciar el comercio local.</p>
+            <p>Luego te contactaremos.</p>
+          </div>
+          <form id="formulario" class="form">
+            <div class="form-group">
+              <label for="email">Correo electrónico: </label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Ingrese su correo electrónico"
+                id="email"
+                title="Email incorrecto"
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="comercio">Comercio: </label>
+              <input
+                name="comercio"
+                type="text"
+                placeholder="Ingrese el nombre de su comercio"
+                id="comercio"
+                title="Comercio solo acepta letras y espacios en blanco."
+                required
+                pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"
+              />
+            </div>
+            <div class="form-group">
+              <label for="telefono">Telefono:</label>
+              <input
+                name="telefono"
+                type="number"
+                placeholder="Ingrese su numero de telefono"
+                id="telefono"
+                title="El telefono es requerido"
+                required
+                pattern="^\d{7,14}$"
+              />
+            </div>
+            <input id="enviar" type="submit" class="btn" value="Enviar" />
+          </form>
+        </div>
+      </section>
+
+      <section id="about-us" class="about-us">
+        <div class="text-about">
+          <h2>Quienes somos 👋</h2>
+          <p>
+            El ministerio de desarrollo y produccion de jujuy tiene como
+            objetivo otorgar distintos servicios a la comunidad como consultorio
+            de pymes, registro de servicios profesionales.
+          </p>
+          <a
+            class="link-more-info"
+            target="_blank"
+            href="http://www.produccion.jujuy.gob.ar/"
+            >Saber mas</a
+          >
+        </div>
+        <div class="cards">
+          <div class="card">
+            <img
+              src="https://randomuser.me/api/portraits/women/78.jpg"
+              alt="miembro del equipo"
+            />
+            <h3>Marta Sanchez</h3>
+            <p>Organizadora del evento.</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://randomuser.me/api/portraits/men/78.jpg"
+              alt="miembro del equipo"
+            />
+            <h3>Carlos Borges</h3>
+            <p>Gerente administrativo.</p>
+          </div>
+          <div class="card">
+            <img
+              src="https://randomuser.me/api/portraits/men/89.jpg"
+              alt="miembro del equipo"
+            />
+            <h3>José Manzilla</h3>
+            <p>Partner coloborativo voluntario</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="weather">
+        <h2>Así está el clima en el lugar del evento 🛰️</h2>
+        <div class="weather-card">
+          <div class="weather-info">
+            <h3 class="weather-mode" id="weather-mode">⏳</h3>
+            <div class="weather-content">
+              <span class="weather-temperature" id="weather-temperature"
+                >⏳</span
+              >
+              <div class="weather-details">
+                <p class="weather-day"></p>
+                <p class="weather-city">
+                  <i class="fa-solid fa-location-dot"></i> San Salvador de Jujuy
+                </p>
+                <p class="weather-city">🏢 Ciudad cultural</p>
+              </div>
+            </div>
+          </div>
+          <img class="weather-img" src="./assets/sunny.png" alt="" />
+        </div>
+        <div class="weather-schedule"></div>
+      </section>
+    </main>
+
+    <template id="template-weather">
+      <div class="weather-gap">
+        <span class="gap-temperature">⏳</span>
+        <span class="gap-icon">⏳</span>
+        <span class="gap-time">⏳</span>
+        <span class="gap-meridiem">⏳</span>
+      </div>
+    </template>
+
+    <footer>
+      <a href="#home">
+        <img src="./assets/logo.png" alt="logo" class="logo" />
+      </a>
+      <ul class="footer-menu">
+        <li>
+          <a href="#about-us">Quienes somos</a>
+        </li>
+        <li>
+          <a href="#about-event">Sobre el evento</a>
+        </li>
+        <li>
+          <a href="#register">Registrarse</a>
+        </li>
+      </ul>
+      <ul class="footer-social-media">
+        <li>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        </li>
+
+        <li>
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        </li>
+
+        <li>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </li>
+
+        <li>
+          <a href="https://walink.co/e548c0" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
+          ></a>
+        </li>
+      </ul>
+    </footer>
+
+    <dialog class="loader" id="modal-loader">
+      <img src="./assets/circles.svg" alt="loader" />
+    </dialog>
+
+    <dialog class="modal modal-msg" id="modal-message">
+      <p class="modal-text"></p>
+      <button class="btn-modal" id="close-modal">Cerrar</button>
+    </dialog>
+
+    <button class="dark-theme-btn" id="icon-theme">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <script type="module" src="./js/index.js"></script>
+  </body>
 </html>
