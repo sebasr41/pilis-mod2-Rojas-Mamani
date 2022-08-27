@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -15,6 +15,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./css/index.css" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon" />
     <title>Pilis - FSWD</title>
   </head>
   <body>
@@ -107,7 +108,7 @@
               <input
                 type="email"
                 name="email"
-                placeholder="Ingrese su correo"
+                placeholder="Ingrese su correo electrónico"
                 id="email"
                 title="Email incorrecto"
                 pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
@@ -119,9 +120,9 @@
               <input
                 name="comercio"
                 type="text"
-                placeholder="Ingrese su comercio"
+                placeholder="Ingrese el nombre de su comercio"
                 id="comercio"
-                title="El nombre del comercio es requerido"
+                title="Comercio solo acepta letras y espacios en blanco."
                 required
                 pattern="^[a-zA-ZÀ-ÿ\s]{1,40}$"
               />
@@ -131,14 +132,14 @@
               <input
                 name="telefono"
                 type="number"
-                placeholder="ingrese su numero de telefono"
+                placeholder="Ingrese su numero de telefono"
                 id="telefono"
-                title="el telefono es requerido"
+                title="El telefono es requerido"
                 required
                 pattern="^\d{7,14}$"
               />
             </div>
-            <input id="enviar" type="submit" class="btn" value="Enviar" disabled />
+            <input id="enviar" type="submit" class="btn" value="Enviar" />
           </form>
         </div>
       </section>
@@ -204,11 +205,7 @@
               </div>
             </div>
           </div>
-          <img
-            class="weather-img"
-            src="./assets/sunny-512x512-781177.png"
-            alt=""
-          />
+          <img class="weather-img" src="./assets/sunny.png" alt="" />
         </div>
         <div class="weather-schedule"></div>
       </section>
@@ -252,18 +249,25 @@
         </li>
 
         <li>
-          <a href="https://wa.me/+543884215449"
-          target="_blank"><i class="fa-brands fa-whatsapp" ></i
+          <a href="https://walink.co/e548c0" target="_blank"
+            ><i class="fa-brands fa-whatsapp"></i
           ></a>
         </li>
       </ul>
     </footer>
 
+    <dialog class="loader" id="modal-loader">
+      <img src="./assets/circles.svg" alt="loader" />
+    </dialog>
+
+    <dialog class="modal modal-msg" id="modal-message">
+      <p class="modal-text"></p>
+      <button class="btn-modal" id="close-modal">Cerrar</button>
+    </dialog>
+
     <button class="dark-theme-btn" id="icon-theme">
       <i class="fa-solid fa-moon"></i>
     </button>
     <script type="module" src="./js/index.js"></script>
-    <script src="./js/form.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
