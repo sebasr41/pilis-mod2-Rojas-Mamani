@@ -129,6 +129,7 @@ h1 {
   filter: blur(6rem);
   width: 200px;
   height: 200px;
+  z-index: -1;
 }
 
 .home::before {
@@ -167,7 +168,7 @@ h1 {
 
 .about-event::after {
   top: 45rem;
-  left: 10rem;
+  left: 7rem;
 }
 
 .about-event iframe {
@@ -645,7 +646,7 @@ footer .logo {
   }
 
   .about-event .about-event-container {
-    width: 75%;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
   }
@@ -710,7 +711,7 @@ footer .logo {
 
   .register .register-content {
     display: flex;
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
